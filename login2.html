@@ -1,0 +1,20 @@
+<title>Login</title>
+<link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+<head>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/login.css">
+  <div style="text-align:center"><span style="color:rgb(255,125,0);font-size:xx-large;background-color:transparent">Login</span></div>
+  <script src="/content-loader.js"></script>
+</head>
+<body>
+  <div id="failed-message" style="display:none">
+      <p>
+        Incorrect Password. Please try again.
+      </p> 
+  </div>
+    
+  <form action="/login2" method="Post" autocomplete="off">
+    Password: <input name="Password" type="password" placeholder="Password"/>
+    <input type="submit" value="Login"/>
+  </form>
+</body>

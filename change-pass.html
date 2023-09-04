@@ -1,0 +1,42 @@
+<head>
+  <title>Change Password</title>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/login.css">
+  <script src="/content-loader.js"></script>
+</head>
+
+<header>
+  <div id="secret-title" style="display:none">
+    <h1>
+      <div style="text-align:center"><span style="color:rgb(255,125,0);font-size:xx-large;background-color:transparent">Change Password</span></div>
+    </h1>
+</div>
+</header>
+<body>
+  
+  
+<div id="change-password" class="loadable"></div>
+  
+  <script>
+    function GetUrlVars(){
+    var vars={};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+    return vars;
+  };
+    
+  if(GetUrlVars()["accountsession"]){
+    document.getElementById("secret-title").style="display:true"
+    document.getElementById("secret").style="display:true"
+    document.getElementById("public").style="display:none"
+  };
+    
+  </script>
+  <script>
+      var loadable = document.getElementsByClassName("loadable");
+      for (var i = 0; i < loadable.length; i++) {
+        load(loadable[i].id);
+      }
+    </script>
+</body>

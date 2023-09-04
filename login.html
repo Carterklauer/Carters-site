@@ -1,0 +1,32 @@
+<title>Login</title>
+<head>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/login.css">
+  <div style="text-align:center"><span style="color:rgb(255,125,0);font-size:xx-large;background-color:transparent">Login</span></div>
+  <script src="/content-loader.js"></script>
+  <div id="failed-message" style="display:none">
+      <p>
+        Incorrect username. Please try again.
+      </p>
+  </div>
+  <script>
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+    if(getUrlVars()["failed"]) {
+      document.getElementById("failed-message").style="display:true";
+      }else if(getUrlVars()["pass"])
+  </script>
+
+</head>
+<body>
+  <form action="/login" method="Post" autocomplete="off">
+    Username or Email: <input name="Username" type="text" placeholder="Username" />
+    <input type="submit" value="Login"/>
+  </form>
+</body>

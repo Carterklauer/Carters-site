@@ -1,0 +1,24 @@
+<head>
+  <title>Friends Content</title>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <script src="content-loader.js"></script>
+</head>
+<header>
+  <h1>
+    <div style="text-align:center"><span style="color:rgb(255,200,0);font-size:xx-large;background-color:transparent">Friend's Content</span></div>
+  </h1>
+</header>
+<main>
+  <div id="friends-content" class="loadable"></div>
+</main>
+<body>
+  <div id="secret" display="none">
+    <div style="text-align:center"></div>
+  </div>
+</body>
+<script>
+  var loadable=document.getElementsByClassName("loadable")
+  for(var i=0; i<loadable.length; i++){
+    load(loadable[i].id);
+  }
+</script>

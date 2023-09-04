@@ -1,0 +1,48 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<head>
+  <title>Carter's Blog</title>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/main.css">
+  <script src="/content-loader.js"></script>
+</head>
+<header>
+  <h1>
+    <div style="text-align:center"> <span style="color:rgb(255,0,0);font-size:xx-large;background-color:transparent">Carter's Blog</span></div>
+  </h1>
+     
+  <h2>
+    <div id="header" class="loadable"></div>
+    <div style="text-align:center"> <span style="color:rgb(255,0,0);font-size:xx-large;background-color:transparent">Pages</span></div>
+    <ul class="menu">
+      <li class="menu"><button><a class="menu" href="/content">Content</a></button></li>
+    </ul>
+  </h2>
+      
+</header>
+<body>
+  <main>
+    <div style="text-align:center"><span style="color:rgb(255,0,0);font-size:xx-large;background-color:transparent"><font face="arial, sans-serif">Welcome to the Site.</font></span></div>
+    <span style="color:rgb(255,0,0)">Hello welcome to my site. This site will be my second blog site. I hope you enjoy the content.</span>
+    <span style="color:rgb(255,125,0)">This site was originally on Google sites, but then decided to move it.
+    </span>
+  </main>
+  <script>
+    var loadable=document.getElementsByClassName("loadable");
+    for (var i = 0; i < loadable.length; i++) {
+      load(loadable[i].id);
+    }
+  </script>
+    
+  
+  <footer>
+    Made with <a href="https://glitch.com">Glitch</a>!
+  </footer>
+
+  <!-- include the Glitch button to show what the webpage is about and
+  to make it easier for folks to view source and remix -->
+  <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+  <script src="https://button.glitch.me/button.js" defer></script>
+</body>

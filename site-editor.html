@@ -1,0 +1,39 @@
+<head>
+  <title>Site Editor</title>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+</head>
+
+<header>
+  <h1>
+    <div style="text-align:center"><span style="color:rgb(255,0,0);font-size:xx-large;background-color:transparent">Site Editor</span></div>
+  </h1>
+</header>
+
+<body>
+  <div id="public" style="display:true">
+    <p>
+      You do not have access to this page
+    </p>
+  </div>
+  
+  <div id="secret" style="display:none">
+    <form action="\siteEditor" method="POST" autocomplete="off">
+      <input name="Page_Name" type="text" placeholder="Page Name"/>
+    </form>
+  </div>
+  <script>
+    function GetUrlVars(){
+    var vars={};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+    return vars;
+  };
+    
+  if(GetUrlVars()["admin"]){
+    document.getElementById("secret").style="display:true"
+    document.getElementById("public").style="display:none"
+  };
+    
+  </script>
+</body>
